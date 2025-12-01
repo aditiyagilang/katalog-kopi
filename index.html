@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Klassy Cafe - Restaurant HTML Template</title>
+<!--
+    
+TemplateMo 558 Klassy Cafe
+
+https://templatemo.com/tm-558-klassy-cafe
+
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <style>
+        /* FILTER & MENU CARD */
+        .menu-filters .form-control {
+          border-radius: 20px;
+          border: 1px solid #ddd;
+          font-size: 13px;
+        }
+      
+        .menu-card{
+          background:#ffffff;
+          border-radius:20px;
+          overflow:hidden;
+          margin-bottom:30px;
+          box-shadow:0 10px 20px rgba(0,0,0,0.08);
+        }
+        .menu-card-thumb{
+          position:relative;
+          height:200px;
+          overflow:hidden;
+        }
+        .menu-card-thumb img{
+          width:100%;
+          height:100%;
+          object-fit:cover;
+        }
+        .badge-best{
+          position:absolute;
+          top:15px;
+          left:15px;
+          background:#fb5849;
+          color:#fff;
+          padding:4px 10px;
+          font-size:11px;
+          border-radius:15px;
+          text-transform:uppercase;
+          letter-spacing:1px;
+        }
+        .menu-card-body{
+          padding:20px 22px 18px;
+        }
+        .menu-card-body h4{
+          font-size:18px;
+          font-weight:600;
+          margin-bottom:5px;
+        }
+        .menu-card-body .menu-meta{
+          font-size:12px;
+          text-transform:uppercase;
+          color:#aaa;
+          margin-bottom:8px;
+        }
+        .menu-card-body .price{
+          color:#fb5849;
+          font-weight:700;
+          font-size:16px;
+        }
+        .menu-card-body small{
+          font-size:12px;
+          color:#666;
+        }
+        .menu-card-body .order-buttons a{
+          margin-right:5px;
+          margin-top:6px;
+          font-size:11px;
+          padding:6px 10px;
+          border-radius:15px;
+        }
+        .section-subtitle{
+          color:#aaa;
+          font-size:13px;
+          margin-bottom:15px;
+        }
+      
+        /* REVIEW & LOYALTY */
+        .rating-stars{
+          color:#ffcc00;
+          font-size:13px;
+        }
+        .review-box{
+          background:#fff;
+          border-radius:15px;
+          padding:18px 20px;
+          box-shadow:0 10px 20px rgba(0,0,0,0.05);
+          margin-bottom:15px;
+        }
+        .stamp{
+          display:inline-flex;
+          width:30px;
+          height:30px;
+          border-radius:50%;
+          border:2px solid #ccc;
+          align-items:center;
+          justify-content:center;
+          font-size:12px;
+          margin:3px;
+        }
+        .stamp.active{
+          background:#fb5849;
+          border-color:#fb5849;
+          color:#fff;
+        }
+      
+        /* MAP RESPONSIVE (untuk Google Maps di Contact) */
+        .map-responsive{
+          overflow:hidden;
+          padding-bottom:56.25%;
+          position:relative;
+          height:0;
+          border-radius:15px;
+        }
+        .map-responsive iframe{
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          border:0;
+        }
+
+            #reviewCards {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;   /* urutan kanan ke kiri */
+            justify-content: flex-start;   /* <-- ini penting, jangan space-between */
+            align-items: flex-start;
+            gap: 8px;                      /* jarak antar card */
+            overflow-x: auto;
+            padding: 5px 0;
+            }
+
+            /* CARD REVIEW KECIL & COMPACT */
+            .review-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 8px 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            min-width: 200px;
+            max-width: 220px;
+            max-height: 260px;
+            flex: 0 0 auto;                /* jangan melebar */
+            }
+
+            /* Semua teks di card warna hitam (utama) */
+            .review-card,
+            .review-card p,
+            .review-card .review-name,
+            .review-card .review-meta,
+            .review-card .review-date {
+            color: #000;
+            margin-bottom: 0;
+            }
+
+            .review-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            }
+
+            .review-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fb5849;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 8px;
+            text-transform: uppercase;
+            font-size: 14px;
+            }
+
+            .review-name {
+            font-size: 13px;
+            font-weight: 600;
+            }
+
+            .review-meta {
+            font-size: 11px;
+            color: #555;
+            }
+
+            .review-stars {
+            color: #ffcc00;
+            font-size: 11px;
+            }
+
+            .review-message {
+            font-size: 12px;
+            line-height: 1.4;
+            margin: 4px 0;
+            }
+
+            .review-date {
+            font-size: 10px;
+            color: #777;
+            }
+
+            .badge-category {
+            font-size: 10px;
+            border-radius: 10px;
+            padding: 3px 8px;
+            background: #f7f7f7;
+            text-transform: capitalize;
+            }
+
+
+      </style>
+      
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                            <li class="scroll-to-section"><a href="#menu">Menu</a></li>
+                            <li class="scroll-to-section"><a href="#promo">Promo</a></li>
+                            <li class="scroll-to-section"><a href="#recommender">Rekomendasi</a></li>
+                            <li class="scroll-to-section"><a href="#reservation">Ulasan</a></li>
+                            <li class="scroll-to-section"><a href="#loyalty">Loyalty</a></li>
+                            <li class="scroll-to-section"><a href="#reservation">Contact</a></li> 
+                        </ul>
+                             
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="left-content">
+                        <div class="inner-content">
+                            <h4>KlassyCafe</h4>
+                            <h6>THE BEST EXPERIENCE</h6>
+                            <div class="main-white-button scroll-to-section">
+                                <a href="#reservation">Make A Reservation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="main-banner header-text">
+                        <div class="Modern-Slider">
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="assets/images/slide-01.jpg" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="assets/images/slide-02.jpg" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="assets/images/slide-03.jpg" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>We Leave A Delicious Memory For You</h2>
+                        </div>
+                        <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="assets/images/about-thumb-01.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="assets/images/about-thumb-02.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="assets/images/about-thumb-03.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-content">
+                        <div class="thumb">
+                            <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
+                            <img src="assets/images/about-video-bg.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Area Ends ***** -->
+
+    <!-- ***** Menu Area Starts ***** -->
+    <section class="section" id="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="section-heading">
+                        <h6>Menu Premium</h6>
+                        <h2>Katalog Kopi & Minuman Spesial</h2>
+                        <p class="section-subtitle">
+                            Lihat detail rasa, tingkat manis, kadar kafein, pilihan gula/es, dan ukuran cup.
+                            Tanda <strong>Best Seller</strong> akan muncul di menu favorit customer.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row menu-filters">
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Cari menu / rasa...">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <select id="categoryFilter" class="form-control">
+                                <option value="">Semua kategori</option>
+                                <option value="kopi">Kopi</option>
+                                <option value="nonkopi">Non Kopi</option>
+                                <option value="matcha">Matcha</option>
+                                <option value="coklat">Coklat</option>
+                                <option value="seasonal">Seasonal</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <select id="priceFilter" class="form-control">
+                                <option value="">Semua harga</option>
+                                <option value="<20">&lt; 20K</option>
+                                <option value="20-30">20K - 30K</option>
+                                <option value=">30">&gt; 30K</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <select id="tempFilter" class="form-control">
+                                <option value="">Hot / Iced</option>
+                                <option value="hot">Hot</option>
+                                <option value="iced">Iced</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                            <select id="sugarFilter" class="form-control">
+                                <option value="">Sugar level</option>
+                                <option value="less">Less sugar</option>
+                                <option value="normal">Normal</option>
+                                <option value="extra">Extra</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3 d-flex align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="bestSellerOnly">
+                                <label class="form-check-label" for="bestSellerOnly">
+                                    Tampilkan Best Seller saja
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- GRID MENU -->
+            <div class="row" id="menuGrid">
+                <!-- Kartu menu di-generate oleh JS dari data/menu.csv -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- ***** Menu Area Ends ***** -->
+    <section class="section" id="promo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-4 text-center">
+                    <div class="section-heading">
+                        <h6>Promo & Eksklusif Website</h6>
+                        <h2>Voucher khusus pemesanan online</h2>
+                        <p class="section-subtitle">
+                            Gunakan kode di bawah ini saat order di aplikasi kesayanganmu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <!-- GoFood -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="review-box">
+                        <h4>Voucher GoFood</h4>
+                        <p>Diskon 15% min. order Rp40.000.</p>
+                        <p>Kode:
+                            <code id="codeGoFood">WEBGOFOOD15</code>
+                        </p>
+                        <button class="main-button-icon btn btn-success btn-block font-weight-bold" onclick="copyVoucher('codeGoFood')">
+                            Copy Kode
+                        </button>
+                    </div>
+                </div>
+                <!-- GrabFood -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="review-box">
+                        <h4>Voucher GrabFood</h4>
+                        <p>Gratis ongkir s/d Rp10.000.</p>
+                        <p>Kode:
+                            <code id="codeGrabFood">WEBGRAB10</code>
+                        </p>
+                        <button class="main-button-icon btn btn-success btn-block font-weight-bold" onclick="copyVoucher('codeGrabFood')">
+                            Copy Kode
+                        </button>
+                    </div>
+                </div>
+                <!-- ShopeeFood -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="review-box">
+                        <h4>Voucher ShopeeFood</h4>
+                        <p>Cashback 20% dalam bentuk koin.</p>
+                        <p>Kode:
+                            <code id="codeShopeeFood">WEBSHOPEE20</code>
+                        </p>
+                        <button class="main-button-icon btn btn-success btn-block font-weight-bold" onclick="copyVoucher('codeShopeeFood')">
+                            Copy Kode
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="recommender">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-4 text-center">
+                    <div class="section-heading">
+                        <h6>Drink Recommender</h6>
+                        <h2>Quiz & Random Menu</h2>
+                        <p class="section-subtitle">
+                            Pilih minuman sesuai kepribadianmu, atau biarkan kami memilihkan secara acak.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <!-- Quiz -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="review-box">
+                        <h4>Quiz: “Which Drink Are You?”</h4>
+                        <form id="recommenderForm">
+                            <div class="form-group">
+                                <label>Suka rasa yang...</label>
+                                <select id="quizTaste" class="form-control" required>
+                                    <option value="">Pilih salah satu</option>
+                                    <option value="strong">Kuat (kopi pekat, bold)</option>
+                                    <option value="light">Ringan (lebih milky / soft)</option>
+                                    <option value="sweet">Manis, dessert-like</option>
+                                </select>
+                            </div>
+                            <div class="form-group mt-2">
+                                <label>Kafein yang kamu mau:</label>
+                                <select id="quizCaffeine" class="form-control" required>
+                                    <option value="">Pilih salah satu</option>
+                                    <option value="tinggi">Tinggi</option>
+                                    <option value="sedang">Sedang</option>
+                                    <option value="rendah">Rendah / tanpa kopi</option>
+                                </select>
+                            </div>
+                            <div class="form-group mt-2">
+                                <label>Tingkat manis favorit:</label>
+                                <select id="quizSugar" class="form-control" required>
+                                    <option value="">Pilih salah satu</option>
+                                    <option value="less">Less sugar</option>
+                                    <option value="normal">Normal</option>
+                                    <option value="extra">Extra sugar</option>
+                                </select>
+                            </div>
+    
+                            <button type="submit" class="btn btn-danger btn-block font-weight-bold">
+                                Lihat Rekomendasi
+                            </button>
+                            
+                        </form>
+                        <div id="recommenderResult" class="mt-3"></div>
+                    </div>
+                </div>
+    
+                <!-- Random menu -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="review-box">
+                        <h4>Random Menu Generator</h4>
+                        <p>
+                            Bingung pilih apa? Klik tombol di bawah, sistem akan pilihkan 1 minuman acak
+                            dari katalog.
+                        </p>
+                        <button id="randomButton" class="main-button-icon btn btn-danger btn-block font-weight-bold">
+                            Pilihkan Saya Minuman
+                        </button>
+                        <div id="randomResult" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="loyalty">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-4 text-center">
+                    <div class="section-heading">
+                        <h6>Loyalty Program</h6>
+                        <h2>Buy 10 Get 1 Free</h2>
+                        <p class="section-subtitle">
+                            Contoh sistem stempel digital, tersimpan di <code>localStorage</code> (demo).
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <!-- Progress & stempel -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="review-box">
+                        <h4>Progress Stempel</h4>
+                        <div class="progress">
+                            <div id="loyaltyProgress" class="progress-bar" role="progressbar"
+                                 style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10">
+                            </div>
+                        </div>
+                        <p class="mt-2" id="loyaltyText"></p>
+                        <div id="loyaltyStamps" class="mt-2"></div>
+    
+                        <div class="mt-3 contact-form">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="button" id="addStampButton" class="main-button-icon">
+                                            +1 Stempel (Simulasi)
+                                        </button>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12" style="margin-top:10px;">
+                                    <fieldset>
+                                        <button type="button" id="resetStampButton" class="main-button-icon">
+                                            Reset
+                                        </button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+    
+                <!-- Aturan -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="review-box">
+                        <h4>Aturan Program</h4>
+                        <ul style="margin-bottom:0;">
+                            <li>Setiap pembelian 1 minuman = 1 stempel.</li>
+                            <li>Jika sudah 10 stempel, dapat 1 minuman gratis.</li>
+                            <li>Pada implementasi asli, data stempel sebaiknya terhubung ke POS / database.</li>
+                            <li>Di website demo ini, tombol hanya untuk simulasi di browser kamu.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row mt-4">
+        <div class="col-lg-12">
+            <div class="map-responsive">
+                <!-- Ganti src dengan embed Google Maps outletmu -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.935617416088!2d107.619123!3d-6.914744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zNsKwNTQnNTMuMSJTIDEwN8KwMzcnMDkuMCJF!5e0!3m2!1sid!2sid!4v1700000000000"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+   <section class="section" id="reservation">
+    <div class="container">
+        <div class="row">
+            <!-- Text kiri -->
+            <div class="col-lg-6 align-self-center">
+                <div class="left-text-content">
+                    <div class="section-heading">
+                        <h6>Ulasan Pelanggan</h6>
+                        <h2>Kritik, Saran & Rating untuk Menu Kami</h2>
+                    </div>
+                    <p>
+                        Kamu bisa memberikan penilaian terhadap rasa kopi, tingkat manis, pelayanan,
+                        atau saran menu baru. Semua ulasan akan kami gunakan untuk
+                        meningkatkan kualitas produk dan layanan.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="phone">
+                                <i class="fa fa-instagram"></i>
+                                <h4>Instagram</h4>
+                                <span><a href="#">@kopikamu</a></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="message">
+                                <i class="fa fa-whatsapp"></i>
+                                <h4>WhatsApp</h4>
+                                <span><a href="#">+62 812-3456-7890</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-3" style="font-size:13px;color:#aaa;">
+                        Ulasan yang kamu kirim akan tersimpan di browser ini dan tampil di daftar
+                        ulasan di samping.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Form kanan + daftar ulasan -->
+            <div class="col-lg-6">
+                <div class="contact-form">
+                    <form id="contact">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4>Form Ulasan Pelanggan</h4>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <fieldset>
+                                    <input name="name" type="text" id="reviewName"
+                                           placeholder="Nama (opsional)">
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <fieldset>
+                                    <input name="contact" type="text" id="reviewContact"
+                                           placeholder="Kontak (Email / WA)">
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <fieldset>
+                                    <input name="drink" type="text" id="reviewDrink"
+                                           placeholder="Menu yang kamu pesan (misal: Caramel Latte)" required>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <fieldset>
+                                    <select name="rating" id="reviewRating" required>
+                                        <option value="">Rating (1-5)</option>
+                                        <option value="5">★★★★★ (5)</option>
+                                        <option value="4">★★★★☆ (4)</option>
+                                        <option value="3">★★★☆☆ (3)</option>
+                                        <option value="2">★★☆☆☆ (2)</option>
+                                        <option value="1">★☆☆☆☆ (1)</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <fieldset>
+                                    <select name="category" id="reviewCategory">
+                                        <option value="">Kategori menu</option>
+                                        <option value="kopi">Kopi</option>
+                                        <option value="nonkopi">Non Kopi</option>
+                                        <option value="matcha">Matcha</option>
+                                        <option value="coklat">Coklat</option>
+                                        <option value="seasonal">Seasonal</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <textarea name="message" rows="4" id="reviewText"
+                                              placeholder="Tulis kritik, saran, atau pengalamanmu di sini..."
+                                              required></textarea>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <button type="submit" class="main-button-icon">
+                                        Kirim Ulasan
+                                    </button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+
+                    <hr style="margin:25px 0;">
+
+           
+
+                </div>
+            </div>
+        </div>
+        <h5 style="color: #ffffff;">Ulasan Terbaru</h5>
+        <p id="reviewEmptyText" style="font-size:13px;color:#aaa;margin-bottom:8px;">
+            Belum ada ulasan. Jadilah yang pertama memberikan review.
+        </p>
+
+        <!-- Card ulasan akan diisi lewat JS -->
+        <div class="row" id="reviewCards"></div>
+    </div>
+</section>
+
+<!-- ***** Ulasan Area Ends ***** -->
+
+    <!-- ***** Reservation Area Ends ***** -->
+
+    <!-- ***** Menu Area Starts ***** -->
+    <section class="section" id="offers">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 offset-lg-4 text-center">
+              <div class="section-heading">
+                <h6>Ulasan Pelanggan</h6>
+                <h2>Kritik, Saran & Rating</h2>
+              </div>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row" id="tabs">
+                <div class="col-lg-12">
+                  <div class="heading-tabs">
+                    <div class="row">
+                      <div class="col-lg-6 offset-lg-3">
+                        <ul>
+                          <!-- Satu tab saja, pakai style bawaan -->
+                          <li>
+                            <a href="#tabs-1">
+                              <img src="assets/images/tab-icon-01.png" alt="">
+                              Ulasan Terbaru
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-lg-12">
+                  <section class="tabs-content">
+                    <article id="tabs-1">
+                      <div class="row">
+                        <!-- kolom kiri -->
+                        <div class="col-lg-6">
+                          <div class="row">
+                            <div class="left-list" id="reviewLeft">
+                              <!-- diisi lewat JS -->
+                            </div>
+                          </div>
+                        </div>
+                        <!-- kolom kanan -->
+                        <div class="col-lg-6">
+                          <div class="row">
+                            <div class="right-list" id="reviewRight">
+                              <!-- diisi lewat JS -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <!-- <p id="reviewEmptyText"
+                         style="font-size:13px;color:#aaa;margin-top:15px;">
+                        Belum ada ulasan. Jadilah yang pertama mengisi form ulasan.
+                      </p> -->
+                    </article>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+    <!-- ***** Chefs Area Ends ***** --> 
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    <div class="right-text-content">
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="left-text-content">
+                        <p>© Copyright Klassy Cafe Co.
+                        
+                        <br>Design: TemplateMo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/custom.js"></script>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/slick.js"></script> 
+    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/isotope.js"></script> 
+
+    <!-- Template default JS -->
+    <script src="assets/js/custom.js"></script>
+
+    <!-- SCRIPT APLIKASI (gabungan semua) -->
+    <script>
+    (function($){
+
+      /* ======================= MENU & FILTER ======================= */
+      var menuItems = [];
+
+      var fallbackMenu = [
+        {
+          id: "1",
+          name: "Caramel Latte",
+          category: "kopi",
+          description: "Espresso dengan susu dan sirup caramel.",
+          flavorNotes: "nutty chocolaty",
+          sweetness: "medium",
+          coffeeType: "arabica",
+          caffeine: "tinggi",
+          sugarOptions: "less / normal / extra",
+          tempOptions: "hot / iced",
+          price: 28000,
+          size: "16 oz",
+          isBestSeller: true,
+          image: "assets/images/slide-01.jpg",
+          gofood: "#",
+          grabfood: "#",
+          shopeefood: "#",
+          tasteStrength: "strong"
+        },
+        {
+          id: "2",
+          name: "Matcha Latte",
+          category: "matcha",
+          description: "Matcha premium dengan susu segar.",
+          flavorNotes: "earthy creamy",
+          sweetness: "medium",
+          coffeeType: "non-coffee",
+          caffeine: "rendah",
+          sugarOptions: "less / normal",
+          tempOptions: "hot / iced",
+          price: 26000,
+          size: "16 oz",
+          isBestSeller: true,
+          image: "assets/images/slide-02.jpg",
+          gofood: "#",
+          grabfood: "#",
+          shopeefood: "#",
+          tasteStrength: "light"
+        },
+        {
+          id: "3",
+          name: "Chocolate Signature",
+          category: "coklat",
+          description: "Coklat premium dengan susu segar.",
+          flavorNotes: "chocolaty creamy",
+          sweetness: "high",
+          coffeeType: "non-coffee",
+          caffeine: "rendah",
+          sugarOptions: "less / normal / extra",
+          tempOptions: "hot / iced",
+          price: 25000,
+          size: "16 oz",
+          isBestSeller: true,
+          image: "assets/images/slide-03.jpg",
+          gofood: "#",
+          grabfood: "#",
+          shopeefood: "#",
+          tasteStrength: "light"
+        }
+      ];
+
+      function formatRupiah(num) {
+        var n = parseInt(num || 0, 10);
+        if (isNaN(n)) n = 0;
+        return n.toLocaleString("id-ID");
+      }
+
+      function parseCSV(text) {
+        var lines = text.trim().split(/\r?\n/);
+        if (lines.length < 2) return [];
+        var headers = lines[0].split(",").map(function(h){ return h.trim(); });
+        var rows = [];
+        for (var i = 1; i < lines.length; i++) {
+          if (!lines[i].trim()) continue;
+          var cols = lines[i].split(",");
+          var obj = {};
+          for (var j = 0; j < headers.length; j++) {
+            obj[headers[j]] = (cols[j] || "").trim();
+          }
+          rows.push(obj);
+        }
+        return rows;
+      }
+
+      function loadMenuFromCSV() {
+        $.get("data/menu.csv")
+          .done(function(data){
+            var rows = parseCSV(data);
+            menuItems = $.map(rows, function(row){
+              return {
+                id: row.id || "",
+                name: row.name || "",
+                category: (row.category || "").toLowerCase(),
+                description: row.description || "",
+                flavorNotes: row.flavor_notes || "",
+                sweetness: row.sweetness || "",
+                coffeeType: row.coffee_type || "",
+                caffeine: row.caffeine || "",
+                sugarOptions: row.sugar_options || "",
+                tempOptions: row.temp_options || "",
+                price: parseInt(row.price || "0", 10),
+                size: row.size || "",
+                isBestSeller: (row.is_best_seller || "").toLowerCase() === "ya" || row.is_best_seller === "1",
+                image: row.image || "assets/images/slide-01.jpg",
+                gofood: row.gofood_link || "",
+                grabfood: row.grabfood_link || "",
+                shopeefood: row.shopeefood_link || "",
+                tasteStrength: row.taste_strength || ""
+              };
+            });
+            applyFilters();
+          })
+          .fail(function(){
+            console.warn("Gagal memuat data/menu.csv, memakai fallback.");
+            menuItems = fallbackMenu;
+            applyFilters();
+          });
+      }
+
+      function renderMenu(list) {
+        var container = $("#menuGrid");
+        container.empty();
+
+        if (!list.length) {
+          container.html('<div class="col-lg-12"><p class="text-center section-subtitle">Menu tidak ditemukan. Coba ubah filter.</p></div>');
+          return;
+        }
+
+        $.each(list, function(idx, item){
+          var bestBadge = item.isBestSeller ? '<span class="badge-best">Best Seller</span>' : "";
+          var goBtn = item.gofood ? '<a href="'+item.gofood+'" target="_blank" class="btn btn-sm btn-success">GoFood</a>' : "";
+          var grBtn = item.grabfood ? '<a href="'+item.grabfood+'" target="_blank" class="btn btn-sm btn-outline-success">GrabFood</a>' : "";
+          var shBtn = item.shopeefood ? '<a href="'+item.shopeefood+'" target="_blank" class="btn btn-sm btn-warning">ShopeeFood</a>' : "";
+
+          var html = `
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="menu-card">
+                <div class="menu-card-thumb">
+                  ${bestBadge}
+                  <img src="${item.image}" alt="${item.name}">
+                </div>
+                <div class="menu-card-body">
+                  <div class="menu-meta">${item.category || "-"}</div>
+                  <h4>${item.name}</h4>
+                  <small>${item.description || ""}</small>
+                  <div style="margin-top:8px; font-size:12px;">
+                    <div><strong>Rasa:</strong> ${item.flavorNotes || "-"}</div>
+                    <div><strong>Tingkat manis:</strong> ${item.sweetness || "-"}</div>
+                    <div><strong>Kafein:</strong> ${item.caffeine || "-"}</div>
+                    <div><strong>Gula / Suhu:</strong> ${item.sugarOptions || "-"} • ${item.tempOptions || "-"}</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center" style="margin-top:10px;">
+                    <div class="price">Rp ${formatRupiah(item.price)}</div>
+                    <small>${item.size || "-"}</small>
+                  </div>
+                  <div class="order-buttons mt-2">
+                    ${goBtn} ${grBtn} ${shBtn}
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+          container.append(html);
+        });
+      }
+
+      function applyFilters() {
+        var searchText = ($("#searchInput").val() || "").toLowerCase();
+        var category = $("#categoryFilter").val();
+        var priceFilter = $("#priceFilter").val();
+        var tempFilter = $("#tempFilter").val();
+        var sugarFilter = $("#sugarFilter").val();
+        var bestOnly = $("#bestSellerOnly").is(":checked");
+
+        var filtered = $.grep(menuItems, function(item){
+          if (searchText) {
+            var combined = (item.name + " " + item.description + " " + item.flavorNotes).toLowerCase();
+            if (combined.indexOf(searchText) === -1) return false;
+          }
+
+          if (category && item.category !== category) return false;
+
+          if (bestOnly && !item.isBestSeller) return false;
+
+          if (tempFilter && (item.tempOptions || "").toLowerCase().indexOf(tempFilter) === -1) return false;
+
+          if (sugarFilter && (item.sugarOptions || "").toLowerCase().indexOf(sugarFilter) === -1) return false;
+
+          if (priceFilter) {
+            var p = item.price || 0;
+            if (priceFilter === "<20" && p >= 20000) return false;
+            if (priceFilter === "20-30" && (p < 20000 || p > 30000)) return false;
+            if (priceFilter === ">30" && p <= 30000) return false;
+          }
+
+          return true;
+        });
+
+        renderMenu(filtered);
+      }
+
+      /* ======================= QUIZ & RANDOM ======================= */
+
+      function handleRecommender(e) {
+        e.preventDefault();
+        if (!menuItems.length) {
+          $("#recommenderResult").html('<p class="section-subtitle">Data menu belum siap.</p>');
+          return;
+        }
+        var taste = $("#quizTaste").val();
+        var caffeine = $("#quizCaffeine").val();
+        var sugar = $("#quizSugar").val();
+
+        var candidates = menuItems.filter(function(item){
+          var strengthMatch =
+            (taste === "strong" && item.tasteStrength === "strong") ||
+            (taste === "light" && item.tasteStrength === "light") ||
+            (taste === "sweet" && (item.sweetness || "").toLowerCase().indexOf("high") !== -1) ||
+            (!item.tasteStrength);
+
+          var caffeineMatch = (item.caffeine || "").toLowerCase().indexOf(caffeine) !== -1;
+          var sugarMatch = (item.sugarOptions || "").toLowerCase().indexOf(sugar) !== -1;
+
+          return strengthMatch && caffeineMatch && sugarMatch;
+        });
+
+        if (!candidates.length) {
+          candidates = menuItems.slice();
+        }
+
+        candidates.sort(function(){ return 0.5 - Math.random(); });
+        var picks = candidates.slice(0, 3);
+
+        var html = '<p class="section-subtitle"><strong>Rekomendasi untukmu:</strong></p><ul>';
+        picks.forEach(function(item){
+          html += '<li>' + item.name + ' <span class="section-subtitle">(' + (item.category || '-') + ')</span></li>';
+        });
+        html += '</ul>';
+
+        $("#recommenderResult").html(html);
+      }
+
+      function pickRandomMenu(targetSelector) {
+        var target = $(targetSelector);
+        if (!menuItems.length) {
+          target.html('<p class="section-subtitle">Data menu belum siap.</p>');
+          return;
+        }
+        var randomItem = menuItems[Math.floor(Math.random() * menuItems.length)];
+        target.html(
+          '<div class="review-box" style="margin-bottom:0;"><strong>' +
+            randomItem.name +
+            '</strong><br><span class="section-subtitle">Kategori: ' +
+            (randomItem.category || "-") +
+            ' • Harga: Rp ' +
+            formatRupiah(randomItem.price) +
+          '</span></div>'
+        );
+      }
+
+      /* ======================= COPY VOUCHER ======================= */
+
+      function copyVoucher(elementId) {
+        var el = document.getElementById(elementId);
+        if (!el) return;
+        var text = (el.textContent || el.innerText || "").trim();
+        if (!text) return;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function(){
+            alert('Kode "' + text + '" sudah disalin.');
+          }).catch(function(){
+            alert("Gagal menyalin kode.");
+          });
+        } else {
+          alert("Kode: " + text);
+        }
+      }
+      // supaya bisa dipakai di onclick HTML
+      window.copyVoucher = copyVoucher;
+
+      /* ======================= REVIEW (LOCAL STORAGE + CARD) ======================= */
+
+      const REVIEW_KEY = 'coffeeSiteReviews';
+  let reviewData = [];
+
+  function loadReviews() {
+    try {
+      const raw = localStorage.getItem(REVIEW_KEY);
+      reviewData = raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      reviewData = [];
+    }
+    renderReviewsToOffers();
+  }
+
+  function saveReviews() {
+    localStorage.setItem(REVIEW_KEY, JSON.stringify(reviewData));
+  }
+
+  // tampilkan ke UI Klassy Week (tab-item kiri & kanan)
+  function renderReviewsToOffers() {
+    const left = document.getElementById('reviewLeft');
+    const right = document.getElementById('reviewRight');
+    const emptyText = document.getElementById('reviewEmptyText');
+
+    if (!left || !right) return;
+
+    left.innerHTML = '';
+    right.innerHTML = '';
+
+    if (!reviewData.length) {
+      if (emptyText) emptyText.style.display = 'block';
+      return;
+    }
+    if (emptyText) emptyText.style.display = 'none';
+
+    reviewData.forEach(function (r, index) {
+      const rating = Number(r.rating || 0);
+      const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+      const dateStr = r.datetime
+        ? new Date(r.datetime).toLocaleDateString('id-ID')
+        : '';
+      const name = r.name || 'Anonim';
+
+      const col = document.createElement('div');
+      col.className = 'col-lg-12';
+      col.innerHTML = `
+        <div class="tab-item">
+          <h4>${r.drink || 'Menu'}</h4>
+          <p>
+            <strong>${name}</strong>${dateStr ? ' • ' + dateStr : ''}<br>
+            ${r.message}
+          </p>
+          <div class="price">
+            <h6>${stars}</h6>
+          </div>
+        </div>
+      `;
+
+      // sebar ke kiri & kanan (ganjil/genap)
+      if (index % 2 === 0) {
+        left.appendChild(col);
+      } else {
+        right.appendChild(col);
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact'); // form ulasan di section reservation
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name     = document.getElementById('reviewName').value.trim();
+        const contact  = document.getElementById('reviewContact').value.trim();
+        const drink    = document.getElementById('reviewDrink').value.trim();
+        const rating   = document.getElementById('reviewRating').value;
+        const category = document.getElementById('reviewCategory').value;
+        const message  = document.getElementById('reviewText').value.trim();
+
+        if (!drink || !rating || !message) {
+          alert('Menu, rating, dan pesan ulasan wajib diisi.');
+          return;
+        }
+
+        const review = {
+          id: Date.now(),
+          datetime: new Date().toISOString(),
+          name,
+          contact,
+          drink,
+          rating: Number(rating),
+          category,
+          message
+        };
+
+        reviewData.unshift(review);
+        saveReviews();
+        renderReviewsToOffers();
+        form.reset();
+        alert('Terima kasih, ulasanmu sudah tersimpan!');
+      });
+    }
+
+    // load dari localStorage saat halaman dibuka
+    loadReviews();
+  });
+      /* ======================= LOYALTY (LOCAL STORAGE) ======================= */
+
+      var LOYALTY_KEY = "coffeeSiteStamps";
+
+      function getStamps() {
+        var raw = localStorage.getItem(LOYALTY_KEY);
+        var val = parseInt(raw || "0", 10);
+        if (isNaN(val)) val = 0;
+        return val;
+      }
+
+      function saveStamps(count) {
+        localStorage.setItem(LOYALTY_KEY, String(count));
+      }
+
+      function updateLoyaltyUI() {
+        var count = getStamps();
+        var capped = Math.min(count, 10);
+        var percent = (capped / 10) * 100;
+
+        $("#loyaltyProgress")
+          .css("width", percent + "%")
+          .attr("aria-valuenow", capped)
+          .text(capped + " / 10");
+
+        if (count >= 10) {
+          $("#loyaltyText").text("Kamu sudah mengumpulkan " + count + " stempel. Klaim 1 minuman gratis!");
+        } else {
+          $("#loyaltyText").text("Kamu sudah punya " + count + " stempel. Tinggal " + (10 - count) + " lagi untuk minuman gratis.");
+        }
+
+        var stampsDiv = $("#loyaltyStamps");
+        stampsDiv.empty();
+        for (var i = 1; i <= 10; i++) {
+          var active = i <= count ? " active" : "";
+          stampsDiv.append('<span class="stamp' + active + '">' + i + '</span>');
+        }
+      }
+
+      /* ======================= INIT ======================= */
+
+      $(document).ready(function(){
+
+        // MENU
+        loadMenuFromCSV();
+        $("#searchInput").on("input", applyFilters);
+        $("#categoryFilter, #priceFilter, #tempFilter, #sugarFilter, #bestSellerOnly").on("change", applyFilters);
+
+        // QUIZ
+        $("#recommenderForm").on("submit", handleRecommender);
+
+        // RANDOM
+        $("#randomButton").on("click", function(){
+          pickRandomMenu("#randomResult");
+        });
+
+        // REVIEW
+        loadReviewsFromStorage();
+        var form = document.getElementById('contact');
+        if (form) {
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var name     = document.getElementById('reviewName').value.trim();
+            var contact  = document.getElementById('reviewContact').value.trim(); // belum dipakai tapi disimpan
+            var drink    = document.getElementById('reviewDrink').value.trim();
+            var rating   = document.getElementById('reviewRating').value;
+            var category = document.getElementById('reviewCategory').value;
+            var message  = document.getElementById('reviewText').value.trim();
+
+            if (!drink || !rating || !message) {
+              alert('Menu, rating, dan pesan ulasan wajib diisi.');
+              return;
+            }
+
+            var review = {
+              id: Date.now(),
+              datetime: new Date().toISOString(),
+              name: name,
+              contact: contact,
+              drink: drink,
+              rating: Number(rating),
+              category: category,
+              message: message
+            };
+
+            reviewData.unshift(review);
+            saveReviewsToStorage();
+            renderReviewCards();
+            form.reset();
+            alert('Terima kasih, ulasanmu sudah tersimpan!');
+          });
+        }
+
+        // LOYALTY
+        updateLoyaltyUI();
+        $("#addStampButton").on("click", function(){
+          var newVal = getStamps() + 1;
+          saveStamps(newVal);
+          updateLoyaltyUI();
+        });
+        $("#resetStampButton").on("click", function(){
+          saveStamps(0);
+          updateLoyaltyUI();
+        });
+      });
+
+    })(jQuery);
+    </script>
+  </body>
+</html>
+
+  
+  </body>
+</html>
