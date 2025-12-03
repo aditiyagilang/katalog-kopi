@@ -120,12 +120,12 @@ body {
 }
 
 ::selection {
-  background: #fb5849;
+  background: #fdb070;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #fb5849;
+  background: #fdb070;
   color: #fff;
 }
 
@@ -147,7 +147,7 @@ body {
 
 .main-white-button a {
   font-size: 13px;
-  color: #fb5849;
+  color: #fdb070;
   background-color: #fff;
   padding: 12px 25px;
   display: inline-block;
@@ -174,7 +174,7 @@ body {
 .section-heading h6 {
   position: relative;
   font-size: 15px;
-  color: #fb5849;
+  color: #fdb070;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -188,7 +188,7 @@ body {
   position: absolute;
   left: 0;
   top: 8px;
-  background-color: #fb5849;
+  background-color: #fdb070;
 }
 
 .section-heading h2 {
@@ -223,11 +223,11 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #fb5849!important;
+  color: #fdb070!important;
 }
 
 .background-header .nav li a.active {
-  color: #fb5849!important;
+  color: #fdb070!important;
 }
 
 .header-area {
@@ -315,12 +315,12 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #fb5849!important;
+  color: #fdb070!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #fb5849!important;
+  color: #fdb070!important;
   opacity: 1;
 }
 
@@ -382,7 +382,7 @@ header
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
   background: #fff;
-  color: #fb5849!important;
+  color: #fdb070!important;
   padding-left: 25px;
 }
 
@@ -522,7 +522,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #fb5849;
+  color: #fdb070;
 }
 
 @media (max-width: 1200px) {
@@ -541,7 +541,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #fb5849!important;
+    color: #fdb070!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -599,7 +599,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #fb5849!important;
+    color: #fdb070!important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -646,6 +646,71 @@ header
 banner
 --------------------------------------------- 
 */
+.spin-wheel-area {
+  text-align: center;
+}
+
+.spin-wheel-wrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto 15px;
+}
+
+.spin-wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 3s cubic-bezier(.17,.67,.32,1.33);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f2f6;
+}
+
+.spin-wheel-center {
+  width: 90px;
+  height: 90px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.spin-wheel-overlay {
+  position: absolute;
+  text-align: center;
+  max-width: 70%;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.spin-arrow {
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid #e74c3c;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.random-result-card {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
 
 #top {
   padding-top: 100px;
@@ -657,10 +722,11 @@ banner
 }
 
 #top .left-content {
-  background-image: url(../images/top-left-bg.jpg);
+  /* background-image: url(../images/top-left-bg.jpg); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #fdb070;
   position: relative;
   width: 100%;
   height: 100%;
@@ -760,7 +826,7 @@ banner
   right:30px;
   width: 50px;
   height: 50px;
-  background-color: #fb5849;
+  background-color: #fdb070;
   border:0 none;
   line-height: 44px;
   border-radius: 50%;
@@ -789,7 +855,7 @@ banner
   left:30px;
   width: 50px;
   height: 50px;
-  background-color: #fb5849;
+  background-color: #fdb070;
   border:0 none;
   line-height: 44px;
   border-radius: 50%;
@@ -884,7 +950,7 @@ about
   display: inline-block;
   line-height: 70px;
   text-align: center;
-  background-color: #fb5849;
+  background-color: #fdb070;
   color: #fff;
   border-radius: 50%;
   transform: translate(-35px, -35px);
@@ -941,8 +1007,8 @@ menu
 .info {
   position: relative;
   width: 100%;
-  background-color: #fb5849;
-  border: 1px solid #fb5849;
+  background-color: #fdb070;
+  border: 1px solid #fdb070;
   transform: translateY(100%)
   translateY(120px)
   translateZ(0);
@@ -971,7 +1037,7 @@ menu
   position: absolute;
   width: 70px;
   height: 70px;
-  background-color: #fb5849;
+  background-color: #fdb070;
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -1015,7 +1081,7 @@ menu
 #menu .owl-nav .owl-prev:before {
   display: inline-block;
   font-family: 'FontAwesome';
-  color: #fb5849;
+  color: #fdb070;
   font-size: 25px;
   font-weight: 700;
   content: '\f104';
@@ -1047,7 +1113,7 @@ menu
 #menu .owl-nav .owl-next:before {
   display: inline-block;
   font-family: 'FontAwesome';
-  color: #fb5849;
+  color: #fdb070;
   font-size: 25px;
   font-weight: 700;
   content: '\f105';
@@ -1085,11 +1151,11 @@ chefs
 }
 
 #chefs .chef-item:hover {
-  border-color: #fb5849;
+  border-color: #fdb070;
 }
 
 #chefs .chef-item:hover .down-content h4 {
-  color: #fb5849;
+  color: #fdb070;
 }
 
 #chefs .chef-item .thumb {
@@ -1146,7 +1212,7 @@ chefs
 }
 
 #chefs .chef-item .thumb ul.social-icons li a:hover {
-  background-color: #fb5849;
+  background-color: #fdb070;
 }
 
 #chefs .chef-item:hover .overlay {
@@ -1229,7 +1295,7 @@ reservation
   text-align: center;
   line-height: 70px;
   color: #fff;
-  background-color: #fb5849;
+  background-color: #fdb070;
   border-radius: 50%;
   font-size: 24px;
   margin-top: -35px;
@@ -1255,7 +1321,7 @@ reservation
 
 #reservation .phone span a:hover,
 #reservation .message span a:hover {
-  color: #fb5849;
+  color: #fdb070;
 }
 
 #contact {
@@ -1301,14 +1367,14 @@ reservation
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
-  border-color: #fb5849;
+  border-color: #fdb070;
 }
 
 .contact-form button {
   margin-top: -10px;
   font-size: 13px;
   color: #fff;
-  background-color: #fb5849;
+  background-color: #fdb070;
   padding: 12px 25px;
   width: 100%;
   box-shadow: none;
@@ -1400,7 +1466,7 @@ offers
   margin: 0 auto 15px auto;
 }
 #offers #tabs ul .ui-tabs-active a {
-  color: #fb5849;
+  color: #fdb070;
   position: relative;
 }
 #offers #tabs ul .ui-tabs-active span {
@@ -1450,7 +1516,7 @@ offers
   right: 0;
   width: 70px;
   height: 70px;
-  background-color: #fb5849;
+  background-color: #fdb070;
   display: inline-block;
   text-align: center;
   line-height: 70px;
@@ -1470,7 +1536,7 @@ footer
 footer {
   margin-top: 60px;
   padding: 50px 0px;
-  background-color: #fb5849;
+  background-color: #fdb070;
 }
 
 footer .left-text-content p {
@@ -1515,7 +1581,7 @@ footer .right-text-content ul li a {
   font-size: 20px;
   background-color: #fff;
   border-radius: 50%;
-  color: #fb5849;
+  color: #fdb070;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
@@ -1592,7 +1658,7 @@ responsive
 
 #preloader {
   overflow: hidden;
-  background-color: #fb5849;
+  background-color: #fdb070;
   left: 0;
   right: 0;
   top: 0;

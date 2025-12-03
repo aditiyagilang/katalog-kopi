@@ -9,8 +9,10 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <title>Klassy Cafe - Restaurant HTML Template</title>
+    <title>Yama Koffie</title>
 <!--
     
 TemplateMo 558 Klassy Cafe
@@ -262,7 +264,7 @@ https://templatemo.com/tm-558-klassy-cafe
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+                            <img src="assets/images/logo.png" style="height: 70px;" align="klassy cafe html template">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -274,7 +276,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <li class="scroll-to-section"><a href="#recommender">Rekomendasi</a></li>
                             <li class="scroll-to-section"><a href="#reservation">Ulasan</a></li>
                             <li class="scroll-to-section"><a href="#loyalty">Loyalty</a></li>
-                            <li class="scroll-to-section"><a href="#reservation">Contact</a></li> 
+                            <li class="scroll-to-section"><a href="#footer">Contact</a></li> 
                         </ul>
                              
                         <a class='menu-trigger'>
@@ -295,10 +297,10 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-lg-4">
                     <div class="left-content">
                         <div class="inner-content">
-                            <h4>KlassyCafe</h4>
+                            <h4>Yama Koffie</h4>
                             <h6>THE BEST EXPERIENCE</h6>
                             <div class="main-white-button scroll-to-section">
-                                <a href="#reservation">Make A Reservation</a>
+                                <a href="#reservation">Buat Ulasan</a>
                             </div>
                         </div>
                     </div>
@@ -342,10 +344,12 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="left-text-content">
                         <div class="section-heading">
-                            <h6>About Us</h6>
-                            <h2>We Leave A Delicious Memory For You</h2>
+                            <h6>Tentang Kami</h6>
+                            <h2>Kami Meninggalkan Kenangan Indah Untuk Anda</h2>
                         </div>
-                        <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+                        <p>Yama Koffie adalah brand kopi lokal yang menghadirkan racikan rasa dengan sentuhan hangat dan personal. Dari kopi yang bold dan smooth, signature yang penuh karakter, hingga pilihan non-coffee yang manis dan menenangkan—setiap minuman diracik fresh untuk menciptakan pengalaman yang pelan, lembut, dan nyaman.
+
+                          Yama Koffie cocok menjadi teman di berbagai momen: saat mencari fokus di pagi hari, mengisi jeda di tengah kesibukan, menemani obrolan ringan, atau sekadar ingin menikmati waktu sendiri dengan rasa favorit. Setiap gelas diciptakan untuk mengalirkan ketenangan, energi, dan sedikit keindahan di hari siapa saja.</p>
                         <div class="row">
                             <div class="col-4">
                                 <img src="assets/images/about-thumb-01.jpg" alt="">
@@ -566,10 +570,24 @@ https://templatemo.com/tm-558-klassy-cafe
                             Bingung pilih apa? Klik tombol di bawah, sistem akan pilihkan 1 minuman acak
                             dari katalog.
                         </p>
-                        <button id="randomButton" class="main-button-icon btn btn-danger btn-block font-weight-bold">
-                            Pilihkan Saya Minuman
-                        </button>
-                        <div id="randomResult" class="mt-3"></div>
+                      
+                        
+                            <div class="spin-wheel-area">
+                              <div class="spin-wheel-wrapper">
+                                <div id="spinWheel" class="spin-wheel">
+                                  <div class="spin-wheel-center"></div>
+                                  <div class="spin-wheel-overlay">Tap to spin</div>
+                                </div>
+                                <div class="spin-arrow"></div>
+                              </div>
+                        
+                              <button id="spinButton" class="main-button-icon btn btn-danger btn-block font-weight-bold mt-3 ">
+                                Putar Roda
+                              </button>
+                            </div>
+                        
+                            <div id="randomResult" class="mt-3"></div>
+                      
                     </div>
                 </div>
             </div>
@@ -583,9 +601,7 @@ https://templatemo.com/tm-558-klassy-cafe
                     <div class="section-heading">
                         <h6>Loyalty Program</h6>
                         <h2>Buy 10 Get 1 Free</h2>
-                        <p class="section-subtitle">
-                            Contoh sistem stempel digital, tersimpan di <code>localStorage</code> (demo).
-                        </p>
+                       
                     </div>
                 </div>
             </div>
@@ -627,7 +643,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
     
                 <!-- Aturan -->
-                <div class="col-lg-6 col-md-12 mb-4">
+                <div class="col-lg-6 col-md-12 mb-4" >
                     <div class="review-box">
                         <h4>Aturan Program</h4>
                         <ul style="margin-bottom:0;">
@@ -644,10 +660,8 @@ https://templatemo.com/tm-558-klassy-cafe
     <div class="row mt-4">
         <div class="col-lg-12">
             <div class="map-responsive">
-                <!-- Ganti src dengan embed Google Maps outletmu -->
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.935617416088!2d107.619123!3d-6.914744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zNsKwNTQnNTMuMSJTIDEwN8KwMzcnMDkuMCJF!5e0!3m2!1sid!2sid!4v1700000000000"
-                    allowfullscreen="" loading="lazy"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1606352037234!2d98.7092158747239!3d3.5504165505555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30313100216205bf%3A0x91e3d1ff79ee84e3!2sYama%20Koffie!5e0!3m2!1sen!2sid!4v1764733246909!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
             </div>
         </div>
     </div>
@@ -668,18 +682,27 @@ https://templatemo.com/tm-558-klassy-cafe
                         meningkatkan kualitas produk dan layanan.
                     </p>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                             <div class="phone">
                                 <i class="fa fa-instagram"></i>
                                 <h4>Instagram</h4>
-                                <span><a href="#">@kopikamu</a></span>
+                                <span><a href="https://www.instagram.com/yamakoffie?igsh=MTh5ZG5mZnJ6YTQxeQ%3D%3D&utm_source=qr">@yamakoffie</a></span>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
+                            <div class="phone">
+                                <i class="fa fa-tiktok"></i>
+                                <h4>Tiktok</h4>
+                                <span><a href="http://www.tiktok.com/@yamakoffie">@yamakoffie</a></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                          
                             <div class="message">
                                 <i class="fa fa-whatsapp"></i>
                                 <h4>WhatsApp</h4>
-                                <span><a href="#">+62 812-3456-7890</a></span>
+                                <span><a href="https://wa.me/6281776348077">081776348077
+                                </a></span>
                             </div>
                         </div>
                     </div>
@@ -771,7 +794,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
             </div>
         </div>
-        <h5 style="color: #ffffff;">Ulasan Terbaru</h5>
+        
         <p id="reviewEmptyText" style="font-size:13px;color:#aaa;margin-bottom:8px;">
             Belum ada ulasan. Jadilah yang pertama memberikan review.
         </p>
@@ -857,29 +880,27 @@ https://templatemo.com/tm-558-klassy-cafe
     <!-- ***** Chefs Area Ends ***** --> 
     
     <!-- ***** Footer Start ***** -->
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-xs-12">
                     <div class="right-text-content">
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://wa.me/6281776348077"><i class="fa fa-whatsapp"></i></a></li>
+                                <li><a href="http://www.tiktok.com/@yamakoffie"><i class="fa fa-tiktok"></i></a></li>
+                                <li><a href="https://www.instagram.com/yamakoffie?igsh=MTh5ZG5mZnJ6YTQxeQ%3D%3D&utm_source=qr"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                        <a href="index.html"><img src="assets/images/logo.png" style="height: 80px;" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12">
                     <div class="left-text-content">
-                        <p>© Copyright Klassy Cafe Co.
+                        <p>© Copyright Yama Koffie
                         
-                        <br>Design: TemplateMo</p>
                     </div>
                 </div>
             </div>
@@ -910,512 +931,625 @@ https://templatemo.com/tm-558-klassy-cafe
 
     <!-- SCRIPT APLIKASI (gabungan semua) -->
     <script>
-    (function($){
+      (function ($) {
+        var menuItems = [];
+      
+        var menuItems = [];
 
-      /* ======================= MENU & FILTER ======================= */
-      var menuItems = [];
+var GRABFOOD_URL  = "https://r.grab.com/g/6-20251201_221603_EA68AD26485B49CEA507ACBBAE22452E_MEXMPS-6-C7KXLBEFETUBNE";
+var SHOPEEFOOD_URL = "http://shopee.co.id/yamakoffie";
 
-      var fallbackMenu = [
-        {
-          id: "1",
-          name: "Caramel Latte",
-          category: "kopi",
-          description: "Espresso dengan susu dan sirup caramel.",
-          flavorNotes: "nutty chocolaty",
-          sweetness: "medium",
-          coffeeType: "arabica",
-          caffeine: "tinggi",
-          sugarOptions: "less / normal / extra",
-          tempOptions: "hot / iced",
-          price: 28000,
-          size: "16 oz",
-          isBestSeller: true,
-          image: "assets/images/slide-01.jpg",
-          gofood: "#",
-          grabfood: "#",
-          shopeefood: "#",
-          tasteStrength: "strong"
-        },
-        {
-          id: "2",
-          name: "Matcha Latte",
-          category: "matcha",
-          description: "Matcha premium dengan susu segar.",
-          flavorNotes: "earthy creamy",
-          sweetness: "medium",
-          coffeeType: "non-coffee",
-          caffeine: "rendah",
-          sugarOptions: "less / normal",
-          tempOptions: "hot / iced",
-          price: 26000,
-          size: "16 oz",
-          isBestSeller: true,
-          image: "assets/images/slide-02.jpg",
-          gofood: "#",
-          grabfood: "#",
-          shopeefood: "#",
-          tasteStrength: "light"
-        },
-        {
-          id: "3",
-          name: "Chocolate Signature",
-          category: "coklat",
-          description: "Coklat premium dengan susu segar.",
-          flavorNotes: "chocolaty creamy",
-          sweetness: "high",
-          coffeeType: "non-coffee",
-          caffeine: "rendah",
-          sugarOptions: "less / normal / extra",
-          tempOptions: "hot / iced",
-          price: 25000,
-          size: "16 oz",
-          isBestSeller: true,
-          image: "assets/images/slide-03.jpg",
-          gofood: "#",
-          grabfood: "#",
-          shopeefood: "#",
-          tasteStrength: "light"
+var fallbackMenu = [
+  {
+    id: "0",
+    name: "americano",
+    category: "kopi",
+    description: "Rasanya clean dengan pahit yang ringan dan tidak menusuk. Aftertaste-nya segar dan tidak berat di mulut. Cocok diminum saat butuh fokus atau ngerjain tugas.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "strong",
+    sugarOptions: "",
+    tempOptions: "iced/hot",
+    price: 10000,
+    priceBottle250: 15000,
+    priceBottle1L: 60000,
+    size: "cup",
+    isBestSeller: false,
+    image: "assets/images/AMERICANO.png",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "strong"
+  },
+  {
+    id: "1",
+    name: "americano orange",
+    category: "kopi",
+    description: "Rasa kopi yang ringan berpadu dengan asam-segar jeruk. Sensasi citrus-nya cukup jelas dan bikin kopi terasa lebih fresh. Cocok diminum saat cuaca panas atau ingin minuman penyegar.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "strong",
+    sugarOptions: "",
+    tempOptions: "iced",
+    price: 15000,
+    priceBottle250: 17000,
+    priceBottle1L: 65000,
+    size: "cup",
+    isBestSeller: false,
+    image: "assets/images/orange americano.jpeg",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "strong"
+  },
+  {
+    id: "2",
+    name: "kopi susu gula aren",
+    category: "kopi",
+    description: "Rasa kopinya tetap terasa dengan manis gula aren yang natural. Teksturnya creamy tanpa rasa manis yang berlebihan. Cocok diminum untuk aktivitas harian atau waktu istirahat.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "strong",
+    sugarOptions: "",
+    tempOptions: "iced",
+    price: 15000,
+    priceBottle250: 17000,
+    priceBottle1L: 65000,
+    size: "cup",
+    isBestSeller: true,
+    image: "assets/images/kopi aren.jpeg",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "strong"
+  },
+  {
+    id: "3",
+    name: "kopi susu pandan",
+    category: "kopi",
+    description: "Kopi susu dengan manis lembut dan aroma pandan yang wangi. Rasa pandan muncul jelas di akhir tegukan. Cocok diminum saat ingin sesuatu yang manis dan calming.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "light",
+    sugarOptions: "",
+    tempOptions: "iced",
+    price: 15000,
+    priceBottle250: 20000,
+    priceBottle1L: 70000,
+    size: "cup",
+    isBestSeller: false,
+    image: "assets/images/kopi pandan.jpeg",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "light"
+  },
+  {
+    id: "4",
+    name: "kopi susu caramel",
+    category: "kopi",
+    description: "Rasa caramel yang manis dan pekat membuat kopi susunya terasa lebih creamy. Aftertaste caramel-nya cukup panjang. Cocok diminum saat ingin minuman yang manis dan bikin mood naik.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "light",
+    sugarOptions: "",
+    tempOptions: "iced",
+    price: 15000,
+    priceBottle250: 20000,
+    priceBottle1L: 70000,
+    size: "cup",
+    isBestSeller: false,
+    image: "assets/images/kopi caramel.jpeg",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "light"
+  },
+  {
+    id: "5",
+    name: "Butterscotch Sea Salt",
+    category: "signature",
+    description: "Rasa butterscotch manis dengan tekstur creamy. Sentuhan asin memberikan keseimbangan pada manisnya. Cocok diminum saat santai sore atau setelah aktivitas.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "light",
+    sugarOptions: "",
+    tempOptions: "iced",
+    price: 23000,
+    priceBottle250: 20000,
+    priceBottle1L: 70000,
+    size: "cup",
+    isBestSeller: true,
+    image: "assets/images/butterscotch.jpeg",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "light"
+  },
+  {
+    id: "6",
+    name: "Butter Tiramisu Latte",
+    category: "signature",
+    description: "Rasa tiramisu yang creamy dipadukan aroma kopi yang lembut. Manisnya seimbang tanpa terasa berat. Cocok diminum saat ngobrol atau mengerjakan pekerjaan ringan.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "light",
+    sugarOptions: "",
+    tempOptions: "iced",
+    price: 23000,
+    priceBottle250: 0,
+    priceBottle1L: 0,
+    size: "cup",
+    isBestSeller: false,
+    image: "assets/images/butter tiramisu.jpeg",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "light"
+  },
+  {
+    id: "7",
+    name: "Homemade Strawberry Matcha",
+    category: "signature",
+    description: "Rasa matcha tetap terasa dengan tambahan strawberry manis-asam. Perpaduannya seimbang antara creamy dan fresh. Cocok diminum saat ingin minuman segar namun tetap lembut.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "light",
+    sugarOptions: "",
+    tempOptions: "iced",
+    price: 23000,
+    priceBottle250: 0,
+    priceBottle1L: 0,
+    size: "cup",
+    isBestSeller: false,
+    image: "assets/images/strawberry matcha.jpeg",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "light"
+  },
+  {
+    id: "8",
+    name: "Thai Tea",
+    category: "nonkopi",
+    description: "Rasa teh yang kuat berpadu manis stabil. Teksturnya creamy dan cukup pekat. Cocok diminum saat nongkrong atau menemani cemilan.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "light",
+    sugarOptions: "",
+    tempOptions: "iced",
+    price: 15000,
+    priceBottle250: 18000,
+    priceBottle1L: 68000,
+    size: "cup",
+    isBestSeller: true,
+    image: "assets/images/thai tea.jpeg",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "light"
+  },
+  {
+    id: "9",
+    name: "Cokelat",
+    category: "nonkopi",
+    description: "Rasa cokelatnya tebal dengan tingkat manis yang pas. Teksturnya lembut dan mudah diminum. Cocok diminum saat membutuhkan comfort drink.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "light",
+    sugarOptions: "",
+    tempOptions: "iced",
+    price: 15000,
+    priceBottle250: 18000,
+    priceBottle1L: 68000,
+    size: "cup",
+    isBestSeller: true,
+    image: "assets/images/chocolatte.jpeg",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "light"
+  },
+  {
+    id: "10",
+    name: "Matcha",
+    category: "nonkopi",
+    description: "Rasa matcha medium dengan bitterness ringan. Susunya memberikan hasil yang creamy namun tetap seimbang. Cocok diminum saat ingin minuman yang menenangkan untuk fokus.",
+    flavorNotes: "",
+    sweetness: "",
+    caffeine: "light",
+    sugarOptions: "",
+    tempOptions: "iced",
+    price: 15000,
+    priceBottle250: 18000,
+    priceBottle1L: 68000,
+    size: "cup",
+    isBestSeller: true,
+    image: "assets/images/matcha.jpeg",
+    gofood: "",
+    grabfood: GRABFOOD_URL,
+    shopeefood: SHOPEEFOOD_URL,
+    tasteStrength: "light"
+  }
+];
+      
+        function formatRupiah(num) {
+          var n = parseInt(num || 0, 10);
+          if (isNaN(n)) n = 0;
+          return n.toLocaleString("id-ID");
         }
-      ];
-
-      function formatRupiah(num) {
-        var n = parseInt(num || 0, 10);
-        if (isNaN(n)) n = 0;
-        return n.toLocaleString("id-ID");
-      }
-
-      function parseCSV(text) {
-        var lines = text.trim().split(/\r?\n/);
-        if (lines.length < 2) return [];
-        var headers = lines[0].split(",").map(function(h){ return h.trim(); });
-        var rows = [];
-        for (var i = 1; i < lines.length; i++) {
-          if (!lines[i].trim()) continue;
-          var cols = lines[i].split(",");
-          var obj = {};
-          for (var j = 0; j < headers.length; j++) {
-            obj[headers[j]] = (cols[j] || "").trim();
+      
+        function renderMenu(list) {
+          var container = $("#menuGrid");
+          container.empty();
+          if (!list.length) {
+            container.html('<div class="col-lg-12"><p class="text-center section-subtitle">Menu tidak ditemukan. Coba ubah filter.</p></div>');
+            return;
           }
-          rows.push(obj);
-        }
-        return rows;
-      }
-
-      function loadMenuFromCSV() {
-        $.get("data/menu.csv")
-          .done(function(data){
-            var rows = parseCSV(data);
-            menuItems = $.map(rows, function(row){
-              return {
-                id: row.id || "",
-                name: row.name || "",
-                category: (row.category || "").toLowerCase(),
-                description: row.description || "",
-                flavorNotes: row.flavor_notes || "",
-                sweetness: row.sweetness || "",
-                coffeeType: row.coffee_type || "",
-                caffeine: row.caffeine || "",
-                sugarOptions: row.sugar_options || "",
-                tempOptions: row.temp_options || "",
-                price: parseInt(row.price || "0", 10),
-                size: row.size || "",
-                isBestSeller: (row.is_best_seller || "").toLowerCase() === "ya" || row.is_best_seller === "1",
-                image: row.image || "assets/images/slide-01.jpg",
-                gofood: row.gofood_link || "",
-                grabfood: row.grabfood_link || "",
-                shopeefood: row.shopeefood_link || "",
-                tasteStrength: row.taste_strength || ""
-              };
-            });
-            applyFilters();
-          })
-          .fail(function(){
-            console.warn("Gagal memuat data/menu.csv, memakai fallback.");
-            menuItems = fallbackMenu;
-            applyFilters();
-          });
-      }
-
-      function renderMenu(list) {
-        var container = $("#menuGrid");
-        container.empty();
-
-        if (!list.length) {
-          container.html('<div class="col-lg-12"><p class="text-center section-subtitle">Menu tidak ditemukan. Coba ubah filter.</p></div>');
-          return;
-        }
-
-        $.each(list, function(idx, item){
-          var bestBadge = item.isBestSeller ? '<span class="badge-best">Best Seller</span>' : "";
-          var goBtn = item.gofood ? '<a href="'+item.gofood+'" target="_blank" class="btn btn-sm btn-success">GoFood</a>' : "";
-          var grBtn = item.grabfood ? '<a href="'+item.grabfood+'" target="_blank" class="btn btn-sm btn-outline-success">GrabFood</a>' : "";
-          var shBtn = item.shopeefood ? '<a href="'+item.shopeefood+'" target="_blank" class="btn btn-sm btn-warning">ShopeeFood</a>' : "";
-
-          var html = `
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="menu-card">
-                <div class="menu-card-thumb">
-                  ${bestBadge}
-                  <img src="${item.image}" alt="${item.name}">
-                </div>
-                <div class="menu-card-body">
-                  <div class="menu-meta">${item.category || "-"}</div>
-                  <h4>${item.name}</h4>
-                  <small>${item.description || ""}</small>
-                  <div style="margin-top:8px; font-size:12px;">
-                    <div><strong>Rasa:</strong> ${item.flavorNotes || "-"}</div>
-                    <div><strong>Tingkat manis:</strong> ${item.sweetness || "-"}</div>
-                    <div><strong>Kafein:</strong> ${item.caffeine || "-"}</div>
-                    <div><strong>Gula / Suhu:</strong> ${item.sugarOptions || "-"} • ${item.tempOptions || "-"}</div>
+          $.each(list, function (idx, item) {
+            var bestBadge = item.isBestSeller ? '<span class="badge-best">Best Seller</span>' : "";
+            var goBtn = item.gofood ? '<a href="' + item.gofood + '" target="_blank" class="btn btn-sm btn-success">GoFood</a>' : "";
+            var grBtn = item.grabfood ? '<a href="' + item.grabfood + '" target="_blank" class="btn btn-sm btn-outline-success">GrabFood</a>' : "";
+            var shBtn = item.shopeefood ? '<a href="' + item.shopeefood + '" target="_blank" class="btn btn-sm btn-warning">ShopeeFood</a>' : "";
+            var html = `
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="menu-card">
+                  <div class="menu-card-thumb">
+                    ${bestBadge}
+                    <img src="${item.image}" alt="${item.name}">
                   </div>
-                  <div class="d-flex justify-content-between align-items-center" style="margin-top:10px;">
-                    <div class="price">Rp ${formatRupiah(item.price)}</div>
-                    <small>${item.size || "-"}</small>
-                  </div>
-                  <div class="order-buttons mt-2">
-                    ${goBtn} ${grBtn} ${shBtn}
+                  <div class="menu-card-body">
+                    <div class="menu-meta">${item.category || "-"}</div>
+                    <h4>${item.name}</h4>
+                    <small>${item.description || ""}</small>
+                    <div style="margin-top:8px; font-size:12px;">
+                      <div><strong>Rasa:</strong> ${item.flavorNotes || "-"}</div>
+                      <div><strong>Tingkat manis:</strong> ${item.sweetness || "-"}</div>
+                      <div><strong>Kafein:</strong> ${item.caffeine || "-"}</div>
+                      <div><strong>Gula / Suhu:</strong> ${item.sugarOptions || "-"} • ${item.tempOptions || "-"}</div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center" style="margin-top:10px;">
+                      <div class="price">Rp ${formatRupiah(item.price)}</div>
+                      <small>${item.size || "-"}</small>
+                    </div>
+                    <div style="font-size:11px; margin-top:4px; color:#666;">
+                      Botol 250ml: <strong>Rp ${formatRupiah(item.priceBottle250 || 0)}</strong><br>
+                      Botol 1L: <strong>Rp ${formatRupiah(item.priceBottle1L || 0)}</strong>
+                    </div>
+                    <div class="order-buttons mt-2">
+                      ${goBtn} ${grBtn} ${shBtn}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          `;
-          container.append(html);
-        });
-      }
+            `;
+            container.append(html);
+          });
+        }
+      
+        function applyFilters() {
+          var searchText = ($("#searchInput").val() || "").toLowerCase();
+          var category = $("#categoryFilter").val();
+          var priceFilter = $("#priceFilter").val();
+          var tempFilter = $("#tempFilter").val();
+          var sugarFilter = $("#sugarFilter").val();
+          var bestOnly = $("#bestSellerOnly").is(":checked");
+          var filtered = $.grep(menuItems, function (item) {
+            if (searchText) {
+              var combined = (item.name + " " + item.description + " " + item.flavorNotes).toLowerCase();
+              if (combined.indexOf(searchText) === -1) return false;
+            }
+            if (category && item.category !== category) return false;
+            if (bestOnly && !item.isBestSeller) return false;
+            if (tempFilter && (item.tempOptions || "").toLowerCase().indexOf(tempFilter) === -1) return false;
+            if (sugarFilter && (item.sugarOptions || "").toLowerCase().indexOf(sugarFilter) === -1) return false;
+            if (priceFilter) {
+              var p = item.price || 0;
+              if (priceFilter === "<20" && p >= 20000) return false;
+              if (priceFilter === "20-30" && (p < 20000 || p > 30000)) return false;
+              if (priceFilter === ">30" && p <= 30000) return false;
+            }
+            return true;
+          });
+          renderMenu(filtered);
+        }
+        var wheelBaseRotation = 0;
+var wheelIsSpinning = false;
+var wheelLastIndex = null;
 
-      function applyFilters() {
-        var searchText = ($("#searchInput").val() || "").toLowerCase();
-        var category = $("#categoryFilter").val();
-        var priceFilter = $("#priceFilter").val();
-        var tempFilter = $("#tempFilter").val();
-        var sugarFilter = $("#sugarFilter").val();
-        var bestOnly = $("#bestSellerOnly").is(":checked");
+function initSpinWheelColors() {
+  var wheel = document.getElementById("spinWheel");
+  if (!wheel || !menuItems.length) return;
 
-        var filtered = $.grep(menuItems, function(item){
-          if (searchText) {
-            var combined = (item.name + " " + item.description + " " + item.flavorNotes).toLowerCase();
-            if (combined.indexOf(searchText) === -1) return false;
+  var colors = [
+    "#e74c3c", "#f39c12", "#f1c40f", "#2ecc71", "#1abc9c",
+    "#3498db", "#9b59b6", "#e67e22", "#d35400", "#16a085", "#e84393"
+  ];
+
+  var n = menuItems.length;
+  var step = 360 / n;
+  var parts = [];
+  for (var i = 0; i < n; i++) {
+    var start = i * step;
+    var end = (i + 1) * step;
+    var color = colors[i % colors.length];
+    parts.push(color + " " + start + "deg " + end + "deg");
+  }
+  wheel.style.background = "conic-gradient(" + parts.join(",") + ")";
+}
+
+function showRandomResult(item) {
+  if (!item) return;
+
+  var html =
+    '<div class="random-result-card"><strong>' +
+    item.name +
+    '</strong><br><span class="section-subtitle">Kategori: ' +
+    (item.category || "-") +
+    " • Harga: Rp " +
+    formatRupiah(item.price) +
+    "</span></div>";
+
+  $("#randomResult").html(html);
+  $("#randomModalBody").html(html);
+  $("#randomModal").modal("show");
+}
+
+function spinWheel() {
+  var wheel = document.getElementById("spinWheel");
+  if (!wheel || !menuItems.length || wheelIsSpinning) return;
+
+  wheelIsSpinning = true;
+
+  var n = menuItems.length;
+  var segmentAngle = 360 / n;
+  var index = Math.floor(Math.random() * n);
+  wheelLastIndex = index;
+
+  var centerAngle = index * segmentAngle + segmentAngle / 2;
+  var extraTurns = 4;
+
+  wheelBaseRotation += extraTurns * 360 + (360 - centerAngle);
+  wheel.style.transform = "rotate(" + wheelBaseRotation + "deg)";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var wheel = document.getElementById("spinWheel");
+  if (wheel) {
+    wheel.addEventListener("transitionend", function (e) {
+      if (e.propertyName !== "transform") return;
+      wheelIsSpinning = false;
+      if (wheelLastIndex == null) return;
+      var item = menuItems[wheelLastIndex];
+      showRandomResult(item);
+    });
+  }
+});
+
+        function handleRecommender(e) {
+          e.preventDefault();
+          if (!menuItems.length) {
+            $("#recommenderResult").html('<p class="section-subtitle">Data menu belum siap.</p>');
+            return;
           }
-
-          if (category && item.category !== category) return false;
-
-          if (bestOnly && !item.isBestSeller) return false;
-
-          if (tempFilter && (item.tempOptions || "").toLowerCase().indexOf(tempFilter) === -1) return false;
-
-          if (sugarFilter && (item.sugarOptions || "").toLowerCase().indexOf(sugarFilter) === -1) return false;
-
-          if (priceFilter) {
-            var p = item.price || 0;
-            if (priceFilter === "<20" && p >= 20000) return false;
-            if (priceFilter === "20-30" && (p < 20000 || p > 30000)) return false;
-            if (priceFilter === ">30" && p <= 30000) return false;
+          var taste = $("#quizTaste").val();
+          var caffeine = $("#quizCaffeine").val();
+          var sugar = $("#quizSugar").val();
+          var candidates = menuItems.filter(function (item) {
+            var strengthMatch =
+              (taste === "strong" && item.tasteStrength === "strong") ||
+              (taste === "light" && item.tasteStrength === "light") ||
+              (taste === "sweet" && (item.sweetness || "").toLowerCase().indexOf("high") !== -1) ||
+              (!item.tasteStrength);
+            var caffeineMatch = (item.caffeine || "").toLowerCase().indexOf(caffeine) !== -1;
+            var sugarMatch = (item.sugarOptions || "").toLowerCase().indexOf(sugar) !== -1;
+            return strengthMatch && caffeineMatch && sugarMatch;
+          });
+          if (!candidates.length) {
+            candidates = menuItems.slice();
           }
-
-          return true;
-        });
-
-        renderMenu(filtered);
-      }
-
-      /* ======================= QUIZ & RANDOM ======================= */
-
-      function handleRecommender(e) {
-        e.preventDefault();
-        if (!menuItems.length) {
-          $("#recommenderResult").html('<p class="section-subtitle">Data menu belum siap.</p>');
-          return;
+          candidates.sort(function () {
+            return 0.5 - Math.random();
+          });
+          var picks = candidates.slice(0, 3);
+          var html = '<p class="section-subtitle"><strong>Rekomendasi untukmu:</strong></p><ul>';
+          picks.forEach(function (item) {
+            html += '<li>' + item.name + ' <span class="section-subtitle">(' + (item.category || '-') + ')</span></li>';
+          });
+          html += '</ul>';
+          $("#recommenderResult").html(html);
         }
-        var taste = $("#quizTaste").val();
-        var caffeine = $("#quizCaffeine").val();
-        var sugar = $("#quizSugar").val();
-
-        var candidates = menuItems.filter(function(item){
-          var strengthMatch =
-            (taste === "strong" && item.tasteStrength === "strong") ||
-            (taste === "light" && item.tasteStrength === "light") ||
-            (taste === "sweet" && (item.sweetness || "").toLowerCase().indexOf("high") !== -1) ||
-            (!item.tasteStrength);
-
-          var caffeineMatch = (item.caffeine || "").toLowerCase().indexOf(caffeine) !== -1;
-          var sugarMatch = (item.sugarOptions || "").toLowerCase().indexOf(sugar) !== -1;
-
-          return strengthMatch && caffeineMatch && sugarMatch;
-        });
-
-        if (!candidates.length) {
-          candidates = menuItems.slice();
-        }
-
-        candidates.sort(function(){ return 0.5 - Math.random(); });
-        var picks = candidates.slice(0, 3);
-
-        var html = '<p class="section-subtitle"><strong>Rekomendasi untukmu:</strong></p><ul>';
-        picks.forEach(function(item){
-          html += '<li>' + item.name + ' <span class="section-subtitle">(' + (item.category || '-') + ')</span></li>';
-        });
-        html += '</ul>';
-
-        $("#recommenderResult").html(html);
-      }
-
-      function pickRandomMenu(targetSelector) {
-        var target = $(targetSelector);
-        if (!menuItems.length) {
-          target.html('<p class="section-subtitle">Data menu belum siap.</p>');
-          return;
-        }
-        var randomItem = menuItems[Math.floor(Math.random() * menuItems.length)];
-        target.html(
-          '<div class="review-box" style="margin-bottom:0;"><strong>' +
+      
+        function pickRandomMenu(targetSelector) {
+          var target = $(targetSelector);
+          if (!menuItems.length) {
+            target.html('<p class="section-subtitle">Data menu belum siap.</p>');
+            return;
+          }
+          var randomItem = menuItems[Math.floor(Math.random() * menuItems.length)];
+          target.html(
+            '<div class="review-box" style="margin-bottom:0;"><strong>' +
             randomItem.name +
             '</strong><br><span class="section-subtitle">Kategori: ' +
             (randomItem.category || "-") +
             ' • Harga: Rp ' +
             formatRupiah(randomItem.price) +
-          '</span></div>'
-        );
-      }
-
-      /* ======================= COPY VOUCHER ======================= */
-
-      function copyVoucher(elementId) {
-        var el = document.getElementById(elementId);
-        if (!el) return;
-        var text = (el.textContent || el.innerText || "").trim();
-        if (!text) return;
-
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(function(){
-            alert('Kode "' + text + '" sudah disalin.');
-          }).catch(function(){
-            alert("Gagal menyalin kode.");
+            '</span></div>'
+          );
+        }
+      
+        function copyVoucher(elementId) {
+          var el = document.getElementById(elementId);
+          if (!el) return;
+          var text = (el.textContent || el.innerText || "").trim();
+          if (!text) return;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () {
+              alert('Kode "' + text + '" sudah disalin.');
+            }).catch(function () {
+              alert("Gagal menyalin kode.");
+            });
+          } else {
+            alert("Kode: " + text);
+          }
+        }
+        window.copyVoucher = copyVoucher;
+      
+        var REVIEW_KEY = "coffeeSiteReviews";
+        var reviewData = [];
+      
+        function loadReviews() {
+          try {
+            var raw = localStorage.getItem(REVIEW_KEY);
+            reviewData = raw ? JSON.parse(raw) : [];
+          } catch (e) {
+            reviewData = [];
+          }
+          renderReviewsToOffers();
+        }
+      
+        function saveReviews() {
+          localStorage.setItem(REVIEW_KEY, JSON.stringify(reviewData));
+        }
+      
+        function renderReviewsToOffers() {
+          var left = document.getElementById("reviewLeft");
+          var right = document.getElementById("reviewRight");
+          var emptyText = document.getElementById("reviewEmptyText");
+          if (!left || !right) return;
+          left.innerHTML = "";
+          right.innerHTML = "";
+          if (!reviewData.length) {
+            if (emptyText) emptyText.style.display = "block";
+            return;
+          }
+          if (emptyText) emptyText.style.display = "none";
+          reviewData.forEach(function (r, index) {
+            var rating = Number(r.rating || 0);
+            var stars = "★".repeat(rating) + "☆".repeat(5 - rating);
+            var dateStr = r.datetime ? new Date(r.datetime).toLocaleDateString("id-ID") : "";
+            var name = r.name || "Anonim";
+            var col = document.createElement("div");
+            col.className = "col-lg-12";
+            col.innerHTML = `
+              <div class="tab-item">
+                <h4>${r.drink || "Menu"}</h4>
+                <p>
+                  <strong>${name}</strong>${dateStr ? " • " + dateStr : ""}<br>
+                  ${r.message}
+                </p>
+                <div class="price">
+                  <h6>${stars}</h6>
+                </div>
+              </div>
+            `;
+            if (index % 2 === 0) {
+              left.appendChild(col);
+            } else {
+              right.appendChild(col);
+            }
           });
-        } else {
-          alert("Kode: " + text);
         }
-      }
-      // supaya bisa dipakai di onclick HTML
-      window.copyVoucher = copyVoucher;
-
-      /* ======================= REVIEW (LOCAL STORAGE + CARD) ======================= */
-
-      const REVIEW_KEY = 'coffeeSiteReviews';
-  let reviewData = [];
-
-  function loadReviews() {
-    try {
-      const raw = localStorage.getItem(REVIEW_KEY);
-      reviewData = raw ? JSON.parse(raw) : [];
-    } catch (e) {
-      reviewData = [];
-    }
-    renderReviewsToOffers();
-  }
-
-  function saveReviews() {
-    localStorage.setItem(REVIEW_KEY, JSON.stringify(reviewData));
-  }
-
-  // tampilkan ke UI Klassy Week (tab-item kiri & kanan)
-  function renderReviewsToOffers() {
-    const left = document.getElementById('reviewLeft');
-    const right = document.getElementById('reviewRight');
-    const emptyText = document.getElementById('reviewEmptyText');
-
-    if (!left || !right) return;
-
-    left.innerHTML = '';
-    right.innerHTML = '';
-
-    if (!reviewData.length) {
-      if (emptyText) emptyText.style.display = 'block';
-      return;
-    }
-    if (emptyText) emptyText.style.display = 'none';
-
-    reviewData.forEach(function (r, index) {
-      const rating = Number(r.rating || 0);
-      const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
-      const dateStr = r.datetime
-        ? new Date(r.datetime).toLocaleDateString('id-ID')
-        : '';
-      const name = r.name || 'Anonim';
-
-      const col = document.createElement('div');
-      col.className = 'col-lg-12';
-      col.innerHTML = `
-        <div class="tab-item">
-          <h4>${r.drink || 'Menu'}</h4>
-          <p>
-            <strong>${name}</strong>${dateStr ? ' • ' + dateStr : ''}<br>
-            ${r.message}
-          </p>
-          <div class="price">
-            <h6>${stars}</h6>
-          </div>
-        </div>
-      `;
-
-      // sebar ke kiri & kanan (ganjil/genap)
-      if (index % 2 === 0) {
-        left.appendChild(col);
-      } else {
-        right.appendChild(col);
-      }
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contact'); // form ulasan di section reservation
-
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const name     = document.getElementById('reviewName').value.trim();
-        const contact  = document.getElementById('reviewContact').value.trim();
-        const drink    = document.getElementById('reviewDrink').value.trim();
-        const rating   = document.getElementById('reviewRating').value;
-        const category = document.getElementById('reviewCategory').value;
-        const message  = document.getElementById('reviewText').value.trim();
-
-        if (!drink || !rating || !message) {
-          alert('Menu, rating, dan pesan ulasan wajib diisi.');
-          return;
+      
+        document.addEventListener("DOMContentLoaded", function () {
+          var form = document.getElementById("contact");
+          if (form) {
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+              var name = document.getElementById("reviewName").value.trim();
+              var contact = document.getElementById("reviewContact").value.trim();
+              var drink = document.getElementById("reviewDrink").value.trim();
+              var rating = document.getElementById("reviewRating").value;
+              var category = document.getElementById("reviewCategory").value;
+              var message = document.getElementById("reviewText").value.trim();
+              if (!drink || !rating || !message) {
+                alert("Menu, rating, dan pesan ulasan wajib diisi.");
+                return;
+              }
+              var review = {
+                id: Date.now(),
+                datetime: new Date().toISOString(),
+                name: name,
+                contact: contact,
+                drink: drink,
+                rating: Number(rating),
+                category: category,
+                message: message
+              };
+              reviewData.unshift(review);
+              saveReviews();
+              renderReviewsToOffers();
+              form.reset();
+              alert("Terima kasih, ulasanmu sudah tersimpan!");
+            });
+          }
+          loadReviews();
+        });
+      
+        var LOYALTY_KEY = "coffeeSiteStamps";
+      
+        function getStamps() {
+          var raw = localStorage.getItem(LOYALTY_KEY);
+          var val = parseInt(raw || "0", 10);
+          if (isNaN(val)) val = 0;
+          return val;
         }
-
-        const review = {
-          id: Date.now(),
-          datetime: new Date().toISOString(),
-          name,
-          contact,
-          drink,
-          rating: Number(rating),
-          category,
-          message
-        };
-
-        reviewData.unshift(review);
-        saveReviews();
-        renderReviewsToOffers();
-        form.reset();
-        alert('Terima kasih, ulasanmu sudah tersimpan!');
-      });
-    }
-
-    // load dari localStorage saat halaman dibuka
-    loadReviews();
-  });
-      /* ======================= LOYALTY (LOCAL STORAGE) ======================= */
-
-      var LOYALTY_KEY = "coffeeSiteStamps";
-
-      function getStamps() {
-        var raw = localStorage.getItem(LOYALTY_KEY);
-        var val = parseInt(raw || "0", 10);
-        if (isNaN(val)) val = 0;
-        return val;
-      }
-
-      function saveStamps(count) {
-        localStorage.setItem(LOYALTY_KEY, String(count));
-      }
-
-      function updateLoyaltyUI() {
-        var count = getStamps();
-        var capped = Math.min(count, 10);
-        var percent = (capped / 10) * 100;
-
-        $("#loyaltyProgress")
-          .css("width", percent + "%")
-          .attr("aria-valuenow", capped)
-          .text(capped + " / 10");
-
-        if (count >= 10) {
-          $("#loyaltyText").text("Kamu sudah mengumpulkan " + count + " stempel. Klaim 1 minuman gratis!");
-        } else {
-          $("#loyaltyText").text("Kamu sudah punya " + count + " stempel. Tinggal " + (10 - count) + " lagi untuk minuman gratis.");
+      
+        function saveStamps(count) {
+          localStorage.setItem(LOYALTY_KEY, String(count));
         }
-
-        var stampsDiv = $("#loyaltyStamps");
-        stampsDiv.empty();
-        for (var i = 1; i <= 10; i++) {
-          var active = i <= count ? " active" : "";
-          stampsDiv.append('<span class="stamp' + active + '">' + i + '</span>');
+      
+        function updateLoyaltyUI() {
+          var count = getStamps();
+          var capped = Math.min(count, 10);
+          var percent = (capped / 10) * 100;
+          $("#loyaltyProgress")
+            .css("width", percent + "%")
+            .attr("aria-valuenow", capped)
+            .text(capped + " / 10");
+          if (count >= 10) {
+            $("#loyaltyText").text("Kamu sudah mengumpulkan " + count + " stempel. Klaim 1 minuman gratis!");
+          } else {
+            $("#loyaltyText").text("Kamu sudah punya " + count + " stempel. Tinggal " + (10 - count) + " lagi untuk minuman gratis.");
+          }
+          var stampsDiv = $("#loyaltyStamps");
+          stampsDiv.empty();
+          for (var i = 1; i <= 10; i++) {
+            var active = i <= count ? " active" : "";
+            stampsDiv.append('<span class="stamp' + active + '">' + i + "</span>");
+          }
         }
-      }
+      
+        $(document).ready(function () {
+        menuItems = fallbackMenu;      // data dari fallbackMenu kamu
+        applyFilters();                // render kartu menu
+        initSpinWheelColors();         // warnai roda berdasarkan jumlah menu
 
-      /* ======================= INIT ======================= */
-
-      $(document).ready(function(){
-
-        // MENU
-        loadMenuFromCSV();
         $("#searchInput").on("input", applyFilters);
-        $("#categoryFilter, #priceFilter, #tempFilter, #sugarFilter, #bestSellerOnly").on("change", applyFilters);
+        $("#categoryFilter, #priceFilter, #tempFilter, #sugarFilter, #bestSellerOnly")
+          .on("change", applyFilters);
 
-        // QUIZ
         $("#recommenderForm").on("submit", handleRecommender);
 
-        // RANDOM
-        $("#randomButton").on("click", function(){
-          pickRandomMenu("#randomResult");
-        });
+        // roda bisa diputar via tombol maupun klik roda
+        $("#spinButton").on("click", spinWheel);
+        $("#spinWheel").on("click", spinWheel);
 
-        // REVIEW
-        loadReviewsFromStorage();
-        var form = document.getElementById('contact');
-        if (form) {
-          form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            var name     = document.getElementById('reviewName').value.trim();
-            var contact  = document.getElementById('reviewContact').value.trim(); // belum dipakai tapi disimpan
-            var drink    = document.getElementById('reviewDrink').value.trim();
-            var rating   = document.getElementById('reviewRating').value;
-            var category = document.getElementById('reviewCategory').value;
-            var message  = document.getElementById('reviewText').value.trim();
-
-            if (!drink || !rating || !message) {
-              alert('Menu, rating, dan pesan ulasan wajib diisi.');
-              return;
-            }
-
-            var review = {
-              id: Date.now(),
-              datetime: new Date().toISOString(),
-              name: name,
-              contact: contact,
-              drink: drink,
-              rating: Number(rating),
-              category: category,
-              message: message
-            };
-
-            reviewData.unshift(review);
-            saveReviewsToStorage();
-            renderReviewCards();
-            form.reset();
-            alert('Terima kasih, ulasanmu sudah tersimpan!');
-          });
-        }
-
-        // LOYALTY
         updateLoyaltyUI();
-        $("#addStampButton").on("click", function(){
+        $("#addStampButton").on("click", function () {
           var newVal = getStamps() + 1;
           saveStamps(newVal);
           updateLoyaltyUI();
         });
-        $("#resetStampButton").on("click", function(){
+        $("#resetStampButton").on("click", function () {
           saveStamps(0);
           updateLoyaltyUI();
         });
       });
 
-    })(jQuery);
-    </script>
+      })(jQuery);
+      </script>
+      
   </body>
 </html>
 
