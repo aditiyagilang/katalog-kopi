@@ -764,6 +764,22 @@ banner
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  #top .left-content {
+    height: auto;              /* jangan pakai height: 100% di mobile */
+    min-height: 100vh;         /* optional: biar minimal setinggi layar */
+    padding: 80px 20px 60px;   /* kasih ruang atas-bawah */
+  }
+
+  #top .left-content .inner-content {
+    position: static;          /* lepas absolute */
+    transform: none;           /* hilangkan translate(-50%, -50%) */
+    left: auto;
+    top: auto;
+    text-align: center;        /* kalau mau tetap di tengah */
+  }
+}
+
 /* ==== Main CSS === */
 .img-fill{
   width: 100%;
